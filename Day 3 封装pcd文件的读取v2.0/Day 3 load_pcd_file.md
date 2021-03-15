@@ -4,7 +4,7 @@
 
 # 封装pcd文件的读取（导出为c++可执行文件）
 
-- 本实例为导出可执行文件而非拓展库
+- 本实例为导出`可执行文件`而非`拓展库`
 
 - 导出可执行文件是为了可以进行DEBUG
 
@@ -117,3 +117,4 @@ target_link_libraries(load_pcd_file PRIVATE ${PCL_LIBRARIES} pybind11::embed)
 
 
 
+catkin_make -DPYTHON_VERSION=3.7 -DPYTHON_EXECUTABLE=$(python -c "import sys;print(sys.executable)")

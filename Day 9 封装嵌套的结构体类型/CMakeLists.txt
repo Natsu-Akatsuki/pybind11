@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.10)
+project(bind_nested_structures)
+
+find_package(PythonInterp)
+find_package(PythonLibs)
+find_package(pybind11)
+
+pybind11_add_module(bind_nested_structures bind_nested_structures.cpp)
+set_target_properties(bind_nested_structures PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
